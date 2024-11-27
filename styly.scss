@@ -40,15 +40,17 @@ header{
     flex-direction: column;
     gap: 3vh;
     align-items: center;
+    @media screen and (min-width: 1000px) {
+        margin-left: 10%;
+    }
     justify-content: center;
     width: 80vw;
     height: 60vh;
     color: white;
-    background-color: rgba(30, 30, 30, 0.9);
+    background-color: rgba(30, 30, 30, 0.95);
     z-index: 3;
     border-radius: 2vw;
     margin-top: 20vh;
-    margin-left: 10%;
     position: fixed;
     text-align: center;
   
@@ -56,10 +58,17 @@ header{
       font-size: 3rem;
       font-weight: bold;
     }
-  
+    #dva {
+        font-size: 1.7rem;
+        font-weight: normal;
+    }
     p {
       color: #0066FE;
-      font-size: 1.2rem;
+      font-size: 2rem;
+      font-weight: bold;
+      @media screen and (max-width: 1000px) {
+        font-size: 1.2rem;
+      }
     }
   
     .progress-container {
@@ -146,7 +155,7 @@ header{
     color: white;
     gap: 50px;
     margin-bottom: -30vh;
-    z-index: 1;
+    z-index: 2;
     
     p{
         font-size: 30px;
@@ -166,7 +175,10 @@ header{
     }
     
 }
-
+.kontaktdecor{
+    position: relative;
+    z-index: -1;
+}
 .kontakt2{
     a:link
     {
