@@ -53,10 +53,6 @@ header #first h1 {
     margin-left: 10%;
   }
 }
-.my-alert h1 {
-  font-size: 3rem;
-  font-weight: bold;
-}
 @media screen and (min-width: 1000px) {
   .my-alert #dva {
     font-size: 1.7rem;
@@ -67,12 +63,20 @@ header #first h1 {
     font-size: 2rem;
     font-weight: bold;
   }
+  .my-alert h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
 }
 @media screen and (max-width: 1000px) {
   .my-alert p {
     font-size: 1.2rem;
     font-weight: normal;
     color: #0066FE;
+  }
+  .my-alert h1 {
+    font-size: 2rem;
+    font-weight: bold;
   }
 }
 .my-alert .progress-container {

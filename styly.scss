@@ -54,10 +54,7 @@ header{
     position: fixed;
     text-align: center;
   
-    h1 {
-      font-size: 3rem;
-      font-weight: bold;
-    }
+    
     @media screen and (min-width: 1000px){
         #dva {
             font-size: 1.7rem;
@@ -69,6 +66,10 @@ header{
             font-weight: bold;
             
         }
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
     }
     
     @media screen and (max-width: 1000px) {
@@ -76,6 +77,10 @@ header{
             font-size: 1.2rem;
             font-weight: normal;
             color: #0066FE;
+        }
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
         }
     }
     
