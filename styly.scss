@@ -35,6 +35,87 @@ header{
     }
 }
 
+.my-alert {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    height: 60vh;
+    color: white;
+    background-color: rgba(30, 30, 30, 0.9);
+    z-index: 3;
+    border-radius: 2vw;
+    margin-top: 20vh;
+    margin-left: 10%;
+    position: fixed;
+    text-align: center;
+  
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+  
+    p {
+      color: #0066FE;
+      font-size: 1.2rem;
+    }
+  
+    .progress-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      gap: 1vh;
+  
+      .progress-count {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: white;
+      }
+  
+      .progress-bar {
+        width: 80%;
+        height: 1.5rem;
+        background-color: #eee;
+        border-radius: 1rem;
+        overflow: hidden;
+  
+        .progress {
+          width: 60%; 
+          height: 100%;
+          background-color: #0066FE;
+        }
+      }
+    }
+  
+    button {
+      background-color: #0066FE;
+      color: white;
+      border: none;
+      border-radius: 1rem;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  
+      &:hover {
+        background-color: #004bbd;
+      }
+    }
+  
+    .close-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+}
+  
 .section1{
     color: white;
 

@@ -54,6 +54,19 @@
         <img src="Images/menu.png" alt="menu">
       </div>
     </header>
+    <div class="my-alert">
+      <h1>Speciální nabídka</h1>
+      <p>Prvních 5 webů zdarma</p>
+      <div class="progress-container">
+        <span class="progress-count">3/5</span>
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+      </div>
+      <p>Zbývají 2 weby zdarma</p>
+      <a href="Kontakt"><button>Chci WEB!</button></a>
+      <span class="close-btn" onclick="closeAlert()">×</span>
+    </div>    
     <div class="mobile">
       <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -63,54 +76,56 @@
         <a href="Kontakt">Kontakt</a>
       </div>
     </div>
-    <div class="section1">
-        <div class="textmain">  
-            <h1 id="demo"></h1>
+    <main>
+      <section class="section1">
+          <div class="textmain">  
+              <h1 id="demo"></h1>
+          </div>
+          <div class="decor">
+            <img src="/Images/maindecor.webp" alt="decor" style="height: 1300px; width: 700px;">
+          </div>
+      </section>
+      <section class="section2">
+        <div class="texty">
+          <div data-aos="fade-right" class="text1" id="mobile-text">
+            <div class="nadpis1" id="mobile-nadpis">
+              <h1 id="char">></h1><h1>Webo<h1 id="blue">vé ap</h1><h1>likace</h1>
+            </div>
+            <div class="popis1" id="mobile-popis">
+              <p>Náš tým na vývoj webových aplikací se stará o poskytnutí nejlepších možných řešení pro vás</p>
+            </div>
+          </div>
+          <div data-aos="fade-left" class="text2" id="mobile-text">
+            <div class="nadpis2" id="mobile-nadpis">
+              <h1 id="char">></h1><h1>Mobil<h1 id="blue">ní ap</h1><h1>likace</h1>
+            </div>
+            <div class="popis2" id="mobile-popis">
+              <p>Přinášíme na trh moderní a uživatelsky příjemné mobilní aplikace pro platformy Android a iOS</p>
+            </div>
+          </div>
+          <div data-aos="fade-right"  class="text3" id="mobile-text">
+            <div class="nadpis3" id="mobile-nadpis">
+              <h1 id="char">></h1><h1>Bezpeč<h1 id="blue">nost</h1><h1>ní řešení</h1>
+            </div>
+            <div class="popis3" id="mobile-popis">
+              <p>Nabídneme vám nejlepší možné řešení s ohledem na aktualní bezpečnostní trendy a potřeby</p>
+            </div>
+          </div>
         </div>
-        <div class="decor">
-          <img src="/Images/maindecor.webp" alt="decor" style="height: 1300px; width: 700px;">
-        </div>
-    </div>
-    <div class="section2">
-      <div class="texty">
-        <div data-aos="fade-right" class="text1" id="mobile-text">
-          <div class="nadpis1" id="mobile-nadpis">
-            <h1 id="char">></h1><h1>Webo<h1 id="blue">vé ap</h1><h1>likace</h1>
-          </div>
-          <div class="popis1" id="mobile-popis">
-            <p>Náš tým na vývoj webových aplikací se stará o poskytnutí nejlepších možných řešení pro vás</p>
-          </div>
-        </div>
-        <div data-aos="fade-left" class="text2" id="mobile-text">
-          <div class="nadpis2" id="mobile-nadpis">
-            <h1 id="char">></h1><h1>Mobil<h1 id="blue">ní ap</h1><h1>likace</h1>
-          </div>
-          <div class="popis2" id="mobile-popis">
-            <p>Přinášíme na trh moderní a uživatelsky příjemné mobilní aplikace pro platformy Android a iOS</p>
-          </div>
-        </div>
-        <div data-aos="fade-right"  class="text3" id="mobile-text">
-          <div class="nadpis3" id="mobile-nadpis">
-            <h1 id="char">></h1><h1>Bezpeč<h1 id="blue">nost</h1><h1>ní řešení</h1>
-          </div>
-          <div class="popis3" id="mobile-popis">
-            <p>Nabídneme vám nejlepší možné řešení s ohledem na aktualní bezpečnostní trendy a potřeby</p>
-          </div>
-        </div>
-      </div>
-    
       
-      <div class="decor3">
-        <img src="/Images/maindecor3.webp" alt="" style="width: 500px; height: 500px;">
-      </div>
-    </div>
+        
+        <div class="decor3">
+          <img src="/Images/maindecor3.webp" alt="" style="width: 500px; height: 500px;">
+        </div>
+      </section>
+    </main>
     <footer>
       <div class="kontakt">
         <div class="nadpis">
           <h2>Kontaktujte nás</h2>
         </div>
         <div class="info">
-          <p>info@bootlabs.cz<br>+420 776 515 343<br>+420 607 645 444<br>Sídlo firmy</p>
+          <p>info@bootlabs.cz<br>+420 776 515 343<br>+420 607 645 444</p>
         </div>
       </div>
       <div class="footerlogo">
@@ -120,11 +135,11 @@
           <h1 class="mobile-footer" >abs</h1>
         </div>
         <div class="text">
-          <p>@ 2023 BootLabs s.r.o.</p>
+          <p>@ 2023 BootLabs</p>
         </div>
       </div>
     </footer>
-    <script src="dropdown.js"></script>
+    <script src="main.js"></script>
     <script src="/aos/aos.js"></script>
     <script>
       AOS.init();

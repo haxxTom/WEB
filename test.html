@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup po scrollování</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 2000px; /* Pro simulaci dlouhé stránky */
+        }
+
+        .trigger-section {
+            margin-top: 800px; /* Simulace sekce, do které scrollujeme */
+            padding: 50px;
+            background-color: #f4f4f4;
+            text-align: center;
+            border: 2px solid #ddd;
+        }
+
+        /* Popup okno */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            border-radius: 8px;
+        }
+
+        /* Překrytí (background) */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        /* Tlačítko zavřít */
+        .popup button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .popup button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Proscrollujte dolů</h1>
+    <p>Posuňte stránku dolů, abyste viděli, jak popup vyskočí.</p>
+
+    <div class="trigger-section">
+        <h2>Tady začíná vaše cílová sekce</h2>
+        <p>Jakmile se sem dostanete, objeví se popup.</p>
+    </div>
+
+    <!-- Překrytí -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Popup -->
+    <div class="popup" id="popup">
+        <p>Jste ve správné sekci! 🎉</p>
+        <button onclick="closePopup()">Zavřít</button>
+    </div>
+
+    <script>
+        let popupShown = false; // Ovládání, aby se popup ukázal jen jednou
+
+        window.addEventListener('scroll', () => {
+            // Získání pozice cílové sekce
+            const triggerSection = document.querySelector('.trigger-section');
+            const triggerPosition = triggerSection.getBoundingClientRect().top;
+
+            // Pokud je cílová sekce viditelná a popup ještě nebyl zobrazen
+            if (triggerPosition < window.innerHeight && !popupShown) {
+                showPopup();
+                popupShown = true; // Zamezení opětovnému zobrazení
+            }
+        });
+
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

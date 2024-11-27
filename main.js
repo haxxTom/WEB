@@ -23,4 +23,8 @@ function typeWriter(){
     setTimeout(typeWriter, speed);
   }
 }
-  
+
+function closeAlert() {
+  const alertBox = document.querySelector('.my-alert');
+  alertBox.style.display = 'none';
+}
