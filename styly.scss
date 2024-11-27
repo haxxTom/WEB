@@ -58,18 +58,27 @@ header{
       font-size: 3rem;
       font-weight: bold;
     }
-    #dva {
-        font-size: 1.7rem;
-        font-weight: normal;
+    @media screen and (min-width: 1000px){
+        #dva {
+            font-size: 1.7rem;
+            font-weight: normal;
+        }
+        p {
+            color: #0066FE;
+            font-size: 2rem;
+            font-weight: bold;
+            
+        }
     }
-    p {
-      color: #0066FE;
-      font-size: 2rem;
-      font-weight: bold;
-      @media screen and (max-width: 1000px) {
-        font-size: 1.2rem;
-      }
+    
+    @media screen and (max-width: 1000px) {
+        p {
+            font-size: 1.2rem;
+            font-weight: normal;
+            color: #0066FE;
+        }
     }
+    
   
     .progress-container {
       display: flex;
