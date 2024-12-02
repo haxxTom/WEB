@@ -40,6 +40,7 @@ header #first h1 {
   justify-content: center;
   width: 80vw;
   height: 60vh;
+  min-height: 350px;
   color: white;
   background-color: rgba(30, 30, 30, 0.95);
   z-index: 3;
@@ -143,14 +144,11 @@ header #first h1 {
 }
 
 .kontakt1 {
-  height: 55vh;
-  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-self: center;
   color: white;
   gap: 50px;
-  margin-bottom: -30vh;
   z-index: 2;
 }
 .kontakt1 p {
@@ -381,11 +379,12 @@ footer .footerlogo .text {
     width: 90%;
   }
   .kontakt1 {
-    width: 340px;
+    width: 90vw;
     background-color: #1E1E1E;
     align-items: center;
     justify-content: center;
     border-radius: 20px;
+    min-height: 300px;
     margin-top: 12vh;
     margin-bottom: auto;
     gap: 1vh;
@@ -432,8 +431,9 @@ footer .footerlogo .text {
     padding-bottom: 30px;
     flex-direction: column;
     align-items: center;
-    width: 340px;
+    width: 90vw;
     height: 28vh;
+    min-height: 170px;
     background-color: #1E1E1E;
     border-radius: 20px;
   }
@@ -1095,7 +1095,7 @@ footer .footerlogo .text {
     width: 850px;
     padding: 50px;
     display: flex;
-    background-color: rgba(17, 17, 17, 0.9);
+    background-color: rgb(17, 17, 17);
     border-radius: 50px;
     flex-direction: column;
     margin-left: 50%;
@@ -1200,7 +1200,7 @@ footer .footerlogo .text {
     margin-bottom: -25vh;
   }
   footer {
-    height: auto;
+    min-height: 250px;
   }
   footer .nadpis {
     margin-top: 5vh;
